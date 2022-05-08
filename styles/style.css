@@ -1,0 +1,234 @@
+body {
+  background-color: #2e2e2e;
+}
+
+p {
+  color: #fff;
+}
+
+.title_app {
+  font-size: 64px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.search_all {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: -50px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.search_img {
+  width: 35px;
+  height: 35px;
+  justify-content: left;
+  margin-top: 5px;
+  margin-left: -15px;
+}
+
+.inp_search {
+  justify-content: right;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: 2px solid #fff;
+  width: 250px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  outline: 2px solid transparent;
+  margin-right: 15px;
+}
+
+.line_title {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.global_div {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.film {
+  width: 240px;
+  position: relative;
+}
+
+.all_film {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 240px;
+}
+
+.img_film {
+  width: 240px;
+}
+
+.img_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.img_mask:hover {
+  background-color: rgba(56, 53, 53, 0.3);
+  cursor: pointer;
+}
+
+.rating {
+  border-radius: 50%;
+  background-color: #2e2e2e;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.rat_green {
+  border: 2px solid green;
+}
+
+.rat_orange {
+  border: 2px solid orange;
+}
+
+.rat_red {
+  border: 2px solid red;
+}
+
+.name_film {
+  font-size: 16px;
+  width: 240px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+.genre_film {
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
+  color: orange;
+  margin-top: -10px;
+  width: 240px;
+}
+
+.popap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+}
+
+.popap_body {
+  width: 65%;
+  background-color: #2e2e2e;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.img_popap {
+  border: 20px solid rgba(0, 0, 0, 0);
+  width: 35%;
+  height: 90%;
+}
+
+.div_popap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.p_name_film {
+  margin-top: 18px;
+  font-size: 34px;
+  font-family: 'Arimo', sans-serif;
+  width: 95%;
+  font-weight: 600;
+}
+
+.p_year {
+  margin-top: -15px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.p_countrie {
+  margin-top: -10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.p_genre {
+  margin-top: -10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.p_slogan {
+  margin-top: -10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.p_time {
+  margin-top: -10px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.p_description {
+  margin-top: 0px;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.close {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  border: none;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.close_img {
+  width: 35px;
+  height: 35px;
+}
