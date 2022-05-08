@@ -132,6 +132,7 @@ function openpopap(obj) {
       let popup = document.getElementById('popap');
       popup.style.display = 'none';
     }, 800);
+    window.location.reload();
   });
   let popap = document.querySelector('.popap');
   document.addEventListener('click', (e) => {
@@ -140,6 +141,7 @@ function openpopap(obj) {
         let popup = document.getElementById('popap');
         popup.style.display = 'none';
       }, 800);
+      window.location.reload();
     }
   });
 }
