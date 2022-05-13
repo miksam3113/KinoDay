@@ -8,9 +8,14 @@ p {
 
 .title_app {
   font-size: 64px;
-  font-family: 'Oswald', sans-serif;
-  text-align: center;
+  font-family: "Oswald", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -10px;
+  color: #fff;
+  width: 180px;
+  text-decoration: none;
 }
 
 .search_all {
@@ -18,7 +23,7 @@ p {
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  margin-top: -50px;
+  margin-top: 0px;
   width: 300px;
   justify-content: space-between;
 }
@@ -99,7 +104,7 @@ p {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   font-weight: 500;
   font-size: 16px;
   position: absolute;
@@ -122,14 +127,14 @@ p {
 .name_film {
   font-size: 16px;
   width: 240px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   font-weight: 400;
   display: flex;
 }
 
 .genre_film {
   font-size: 14px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   color: orange;
   margin-top: -10px;
   width: 240px;
@@ -158,8 +163,7 @@ p {
 
 .img_popap {
   border: 20px solid rgba(0, 0, 0, 0);
-  width: 35%;
-  height: 90%;
+  width: 240;
 }
 
 .div_popap {
@@ -171,7 +175,7 @@ p {
 .p_name_film {
   margin-top: 18px;
   font-size: 34px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   width: 95%;
   font-weight: 600;
 }
@@ -180,42 +184,42 @@ p {
   margin-top: -15px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .p_countrie {
   margin-top: -10px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .p_genre {
   margin-top: -10px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .p_slogan {
   margin-top: -10px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .p_time {
   margin-top: -10px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .p_description {
   margin-top: 0px;
   width: 100%;
   font-size: 16px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .close {
