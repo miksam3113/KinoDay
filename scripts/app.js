@@ -1,16 +1,16 @@
-const API_KEY = '9e255f4d-0362-42cc-968c-c5becf06f282';
+const API_KEY = "9e255f4d-0362-42cc-968c-c5becf06f282";
 const API_URL_TOP_POPULAR_100 =
-  'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1';
+  "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1";
 const API_URL_SEARCH =
-  'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=';
-const API_URL_AB_FILM = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/';
+  "https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=";
+const API_URL_AB_FILM = "https://kinopoiskapiunofficial.tech/api/v2.2/films/";
 
 async function getfilms(url, api) {
   fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-API-KEY': api,
-      'Content-Type': 'application/json',
+      "X-API-KEY": api,
+      "Content-Type": "application/json",
     },
   })
     .then((res) => res.json())
@@ -19,10 +19,10 @@ async function getfilms(url, api) {
 
 async function getInfoFilm(url, api) {
   fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-API-KEY': api,
-      'Content-Type': 'application/json',
+      "X-API-KEY": api,
+      "Content-Type": "application/json",
     },
   })
     .then((res) => res.json())
@@ -30,7 +30,7 @@ async function getInfoFilm(url, api) {
 }
 
 function verifyrating(rating) {
-  if (rating[rating.length - 1] == '%') {
+  if (rating[rating.length - 1] == "%") {
     rating = parseInt(rating, 10) / 10;
     return rating.toFixed(1);
   } else {
@@ -39,25 +39,25 @@ function verifyrating(rating) {
 }
 
 function getrating(rating) {
-  if (rating[rating.length - 1] == '%') {
+  if (rating[rating.length - 1] == "%") {
     rating = parseInt(rating, 10) / 10;
     rating = rating.toFixed(1);
   }
   if (rating >= 7) {
-    return 'rat_green';
+    return "rat_green";
   }
   if (rating > 5 && rating < 7) {
-    return 'rat_orange';
+    return "rat_orange";
   }
   if (rating <= 5) {
-    return 'rat_red';
+    return "rat_red";
   }
 }
 
 function loadfilms(obj) {
   console.log(obj);
-  const films = document.getElementById('films');
-  films.innerHTML = '';
+  const films = document.getElementById("films");
+  films.innerHTML = "";
   for (let i in obj.films) {
     films.innerHTML += `
     <div class="all_film">
@@ -78,16 +78,16 @@ function loadfilms(obj) {
 
 getfilms(API_URL_TOP_POPULAR_100, API_KEY);
 
-const form = document.querySelector('form');
-const inp_search = document.getElementById('input');
+const form = document.querySelector("form");
+const inp_search = document.getElementById("input");
 
-form.addEventListener('submit', function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const searchurl = API_URL_SEARCH + inp_search.value;
   if (inp_search.value) {
     getfilms(searchurl, API_KEY);
-    searchurl.value = '';
+    searchurl.value = "";
   }
 });
 
@@ -101,9 +101,17 @@ function funon() {
   }
 }
 
+function verify(v) {
+  if (v == null || v == undefined || v == "") {
+    return "Нету";
+  } else {
+    return v;
+  }
+}
+
 function openpopap(obj) {
   console.log(obj);
-  const films = document.getElementById('films');
+  const films = document.getElementById("films");
   films.innerHTML += `
     <div id="popap" class="popap">
       <div class="popap_body">
@@ -117,7 +125,7 @@ function openpopap(obj) {
               <p class="p_genre">Жанр: ${obj.genres.map(
                 (genre) => ` ${genre.genre}`
               )}</p>
-              <p class="p_slogan">Слоган: ${obj.slogan}</p>
+              <p class="p_slogan">Слоган: ${verify(obj.slogan)}</p>
               <p class="p_time">Время: ${obj.filmLength} мин</p>
               <p max="300" class="p_description">${obj.description}</p>
           </div>
@@ -126,22 +134,18 @@ function openpopap(obj) {
           </button>
       </div>
     </div>`;
-  let close = document.getElementById('close');
-  close.addEventListener('click', () => {
+  document.getElementById("close").addEventListener("click", () => {
     window.setTimeout(function removethis() {
-      let popup = document.getElementById('popap');
-      popup.style.display = 'none';
+      document.getElementById("popap").remove();
     }, 800);
-    window.location.reload();
+    //window.location.reload();
   });
-  let popap = document.querySelector('.popap');
-  document.addEventListener('click', (e) => {
-    if (e.target === popap) {
+  document.addEventListener("click", (e) => {
+    if (e.target === document.querySelector(".popap")) {
       window.setTimeout(function removethis() {
-        let popup = document.getElementById('popap');
-        popup.style.display = 'none';
+        document.getElementById("popap").remove();
       }, 800);
-      window.location.reload();
+      //window.location.reload();
     }
   });
 }
